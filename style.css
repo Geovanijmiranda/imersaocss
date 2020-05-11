@@ -1,0 +1,38 @@
+body {
+    background-image: url('C:/Pos_Graduacao/HTML/image/fundo.jpg');
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+}
+
+.menu {
+    background-color: white;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.subtitle,
+.title {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.subtitle {
+    font-style: italic;
+}
