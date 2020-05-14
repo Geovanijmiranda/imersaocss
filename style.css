@@ -1,12 +1,36 @@
+/*reset css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('image/fundo.jpg');
     background-size: auto 100vh;
-    font-family: Arial;
+    font-family: 'Caveat', cursive;
     height: 100vh;
+}
+
+/*se a tela tiver pelo menos 400px vai carregar estes stylos*/
+@media (main-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 .menu ul {
@@ -16,6 +40,11 @@ body {
 
 .menu li {
     list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
 }
 
 a {
@@ -33,6 +62,61 @@ a:hover {
     text-align: center;
 }
 
+.title {
+    font-size: 4em;
+    font-family: 'Caveat', cursive;
+}
+
 .subtitle {
     font-style: italic;
+}
+
+.portifolio {
+    padding: 2em;
+}
+
+.portifolio h2 {
+    font-family: 'Caveat', cursive;
+    color: whitesmoke;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.portifolio .grid {
+    display: grid;
+    grid-gap: 1em;
+
+}
+
+@media (min-width: 560px) {
+    .portifolio .grid {
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width: 860px) {
+    .portifolio .grid {
+        grid-template-columns: repeat(3,240px);
+        justify-content: center;
+        align-content: center;
+        height: calc(100vh - 8em -48px);
+    }
+}
+
+.portifolio figure {
+    text-align: center;
+}
+
+.img-portfolio {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 10%;
+}
+
+.portifolio .grid figure:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
